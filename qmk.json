@@ -1,6 +1,7 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["kbdfans/kbd67/rev2", "alexfleury"]
+        ["kbdfans/kbd67/rev2", "alexfleury"],
+        ["keebio/quefrency/rev2", "alexfleury"]
     ]
 }
