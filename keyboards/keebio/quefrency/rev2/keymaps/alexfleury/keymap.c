@@ -15,8 +15,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
 	[1] = LAYOUT_65_iso(
         KC_GRV, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_DEL, KC_DEL, KC_NO,
-        LALT(KC_TAB), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_BRIU, KC_HOME,
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_BRID, KC_NO, KC_END,
+        LALT(KC_TAB), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_BRMU, KC_BRIU, KC_HOME,
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_BRMD, KC_BRID, KC_NO, KC_END,
         GE_SWAP, AG_TOGG, LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), KC_NO, KC_NO, KC_MUTE, KC_NO, KC_NO, KC_NO, GE_NORM, KC_VOLU, KC_TRNS,
         KC_NO, KC_NO, KC_NO, KC_TRNS, KC_MPLY, KC_MPLY, KC_MPLY, KC_NO, KC_NO, KC_NO, KC_MPRV, KC_VOLD, KC_MNXT
         )
@@ -26,9 +26,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
    switch(biton32(layer_state)){
         case 1:
             if (clockwise){
-                tap_code(KC_BRIU);
+                tap_code(KC_BRMU);
             } else{
-                tap_code(KC_BRID);
+                tap_code(KC_BRMD);
             }
             break;
         default:
